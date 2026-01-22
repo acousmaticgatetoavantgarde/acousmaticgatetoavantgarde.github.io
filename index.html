@@ -1,65 +1,520 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>การศึกษาละอองฝนที่ตกกระทบตั๊กแตน</title>
-    <style>
-        body {
-            /* Разноцветный градиент на фоне */
-            background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 25%, #ffecd2 50%, #a1c4fd 75%, #c2e9fb 100%);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            color: #333;
-            text-align: center;
-        }
+    <title>KATOO500 gallery</title>
+    <!-- Страница сгенерирована нейросетью Mixtral 21.01.2026 -->
+	<link rel="stylesheet"  type="text/css" href="pixbox/aga.css" />
 
-        .container {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            max-width: 700px;
-            margin: 20px;
-        }
-
-        h1 {
-            color: #2e7d32;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            border: 5px solid white;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-    </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Ссылка на картинку в папке pixbox -->
-        <img src="pixbox/grasshopper.png" alt="Raindrops on grasshopper">
-        
-        <h1>การศึกษาละอองฝนที่ตกกระทบตั๊กแตน</h1>
-        
-        <p>
-            การวิจัยในปัจจุบันเน้นไปที่กลศาสตร์ของของไหลเมื่อหยดน้ำฝนกระทบกับโครงสร้างภายนอกของตั๊กแตน 
-            นักวิทยาศาสตร์สังเกตว่าพลังงานจลน์ของหยดน้ำส่งผลต่อการทรงตัวของแมลงอย่างไร 
-            และการเคลือบผิวตามธรรมชาติช่วยลดแรงกระแทกเพื่อป้องกันการบาดเจ็บระหว่างพายุฝนได้อย่างไร
-        </p>
+<div class="overlay" id="overlay"></div>
+	
+    <header>
+        <div class="container">
+            <h1>acousmaticgatetoavantgarde.github.io</h1>
+        </div>
+    </header>
+	
+	<div class="container filter-ui">
+    <div class="filter-group">
+        <h4>Периоды:</h4>
+        <div id="p-yellow" class="filter-btn" data-filter-group="period" data-filter-value="yellow">Желтый</div>
+        <div id="p-orange" class="filter-btn" data-filter-group="period" data-filter-value="orange">Оранжевый</div>
+        <div id="p-blue" class="filter-btn" data-filter-group="period" data-filter-value="blue">Голубой</div>
+        <div id="p-modern" class="filter-btn" data-filter-group="period" data-filter-value="modern">Современный</div>
+		<div id="p-ultra" class="filter-btn" data-filter-group="period" data-filter-value="ultra">Ультра</div>
     </div>
 
+    <div class="filter-group">
+        <h4>Типы:</h4>
+        <div id="t-notall" class="filter-btn" data-filter-group="type" data-filter-value="indie">Не для всех</div>
+        <div id="t-exp" class="filter-btn" data-filter-group="type" data-filter-value="experimental">Экспериментальный</div>
+        <div id="t-thought" class="filter-btn" data-filter-group="type" data-filter-value="balance">Продуманный</div>
+        <div id="t-atm" class="filter-btn" data-filter-group="type" data-filter-value="ambient">Атмосфера</div>
+		        <div id="t-atm" class="filter-btn" data-filter-group="type" data-filter-value="ost">OST</div>
+    </div>
+</div>
+
+
+    <main class="container">
+        <div class="grid-container">
+
+            <div class="art-block"  data-art-id="1" data-period="yellow" data-type="indie">
+			<img class="cvr" src="pixbox/covers/Cover-0001.jpg" title="Тунгусская А Бэ Вэ Га" alt="Tunguss" />
+            </div>
+
+            <div class="art-block"  data-art-id="2" data-period="yellow" data-type="indie">
+			<img class="cvr" src="pixbox/covers/Cover-0002.jpg" title="Убийца Вакуолей" alt="Vacuol" />
+            </div>
+
+            <div class="art-block"  data-art-id="3"  data-period="yellow" data-type="experimental">
+			<img class="cvr" src="pixbox/covers/Cover-0003.jpg" title="Memorial" alt="Memorial" />
+            </div>
+			
+            <div class="art-block"  data-art-id="4"  data-period="yellow" data-type="ost">
+			<img class="cvr" src="pixbox/covers/Cover-0004.jpg" title="Призрак OST" alt="Ghost" />
+            </div>
+			
+            <div class="art-block"  data-art-id="5"  data-period="yellow" data-type="ambient">
+			<img class="cvr" src="pixbox/covers/Cover-0005.jpg" title="August Space" alt="Space" />
+            </div>
+
+            <div class="art-block"  data-art-id="6"  data-period="yellow" data-type="indie">
+			<img class="cvr" src="pixbox/covers/Cover-0006.jpg" title="Record of the dreams" alt="Rec" />
+            </div>
+
+            <div class="art-block"  data-art-id="7"  data-period="yellow" data-type="experimental">
+			<img class="cvr" src="pixbox/covers/Cover-0007.jpg" title="Асимметрия" alt="Assymetry" />
+            </div>
+
+            <div class="art-block"  data-art-id="8"  data-period="orange" data-type="balance">
+			<img class="cvr" src="pixbox/covers/Cover-0008.jpg" title="Зигота" alt="Zygote" />
+            </div>
+
+            <div class="art-block"  data-art-id="9"  data-period="orange" data-type="indie">
+			<img class="cvr" src="pixbox/covers/Cover-0009.jpg" title="Праздник бродячего дерева" alt="wandering_tree_celebrate" />
+            </div>
+
+            <div class="art-block"  data-art-id="10"  data-period="orange" data-type="balance">
+			<img class="cvr" src="pixbox/covers/Cover-0010.jpg" title="Cyber Simulator" alt="Cyber" />
+            </div>
+
+            <div class="art-block"  data-art-id="11"  data-period="orange" data-type="indie">
+			<img class="cvr" src="pixbox/covers/Cover-0011.jpg" title="Игорь" alt="Igor" />
+            </div>
+
+            <div class="art-block"  data-art-id="12"  data-period="orange" data-type="experimental">
+			<img class="cvr" src="pixbox/covers/Cover-0012.jpg" title="Laser Game" alt="Laser_game" />
+            </div>
+
+            <div class="art-block"  data-art-id="13"  data-period="orange" data-type="balance">
+			<img class="cvr" src="pixbox/covers/Cover-0013.jpg" title="Melomania" alt="Melomania" />
+            </div>
+
+            <div class="art-block"  data-art-id="14"  data-period="orange" data-type="ost">
+			<img class="cvr" src="pixbox/covers/Cover-0014.jpg" title="Реставратор OST" alt="res" />
+            </div>
+
+            <div class="art-block"  data-art-id="15"  data-period="orange" data-type="balance">
+			<img class="cvr" src="pixbox/covers/Cover-0015.jpg" title="Sentimental voyage with a metronome" alt="Sentimental" />
+            </div>
+
+            <div class="art-block"  data-art-id="16"  data-period="blue" data-type="experimental">
+			<img class="cvr" src="pixbox/covers/Cover-0016.jpg" title="Финиш" alt="Finish" />
+            </div>
+
+            <div class="art-block"  data-art-id="17"  data-period="blue" data-type="experimental">
+			<img class="cvr" src="pixbox/covers/Cover-0017.jpg" title="Посвящение топинамбурам" alt="Tupi" />
+            </div>
+
+            <div class="art-block"  data-art-id="18"  data-period="blue" data-type="indie">
+			<img class="cvr" src="pixbox/covers/Cover-0018.jpg" title="Непонятная резня или внеземная тетралогия" alt="fest" />
+            </div>
+			
+            <div class="art-block"  data-art-id="19"  data-period="blue" data-type="balance">
+			<img class="cvr" src="pixbox/covers/Cover-0019.jpg" title="Возрождение индастрила" alt="Industrial" />
+            </div>
+
+            <div class="art-block"  data-art-id="20"  data-period="blue" data-type="balance">
+			<img class="cvr" src="pixbox/covers/Cover-0020.jpg" title="Evening miracles" alt="miracles" />
+            </div>
+
+            <div class="art-block"  data-art-id="21"  data-period="blue" data-type="ambient">
+			<img class="cvr" src="pixbox/covers/Cover-0021.jpg" title="Ящукъ Болбаюнъ" alt="Box_big_talker" />
+            </div>
+
+            <div class="art-block"  data-art-id="22"  data-period="modern" data-type="experimental">
+			<img class="cvr" src="pixbox/covers/Cover-0022.jpg" title="Форс - мажор" alt="FMj" />
+            </div>
+
+            <div class="art-block"  data-art-id="23"  data-period="modern" data-type="balance">
+			<img class="cvr" src="pixbox/covers/Cover-0023.jpg" title="Aerobics ans Sci fi" alt="Aero" />
+            </div>
+
+            <div class="art-block"  data-art-id="24"  data-period="modern" data-type="experimental">
+			<img class="cvr" src="pixbox/covers/Cover-0024.jpg" title="Следующие цвета слов" alt="next_colorum" />
+            </div>
+
+            <div class="art-block"  data-art-id="25"  data-period="modern" data-type="balance">
+			<img class="cvr" src="pixbox/covers/Cover-0025.jpg" title="Экспедиция на Талос" alt="Talos" />
+            </div>
+
+            <div class="art-block"  data-art-id="26"  data-period="modern" data-type="balance">
+			<img class="cvr" src="pixbox/covers/Cover-0027.jpg" title="Creepy Cartoons" alt="mult" />
+            </div>
+
+            <div class="art-block"  data-art-id="27"  data-period="modern" data-type="balance">
+			<img class="cvr" src="pixbox/covers/Cover-0028.jpg" title="Вдумчивое исследование креветок" alt="krevedko" />
+            </div>
+			
+			<div class="art-block"  data-art-id="28"  data-period="ultra" data-type="indie">
+			<img class="cvr" src="pixbox/covers/Cover-0026.jpg" title="Волосы феи" alt="Fairy" />
+            </div>
+
+            <div class="art-block"  data-art-id="29"  data-period="ultra" data-type="balance">
+			<img class="cvr" src="pixbox/covers/Cover-0029.jpg" title="Media Fantasy" alt="Media" />
+            </div>
+
+            <div class="art-block"  data-art-id="30"  data-period="ultra" data-type="experimental">
+			<img class="cvr" src="pixbox/covers/Cover-0030.jpg" title="Scythian gold or frozen ancient Sun" alt="ScyGold" />
+            </div>			
+
+			
+			
+			
+
+
+        </div>
+    </main>
+	
+
+        <div class="descriptions-container">
+            <!-- Описание 1 (привязано к data-art-id="1") -->
+            <div class="art-description" data-art_for="1">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>ТУНГУССКАЯ А Бэ Вэ Га 2004</h3>
+                <p class="cardtxt">
+                   &nbsp;&nbsp;&nbsp; В межзвёздном пространстве терпит поломку полуорганический корабль - компсогнат со звезды Ю. В результате магнитной имплозии происходит захват ледяного астероида, избавиться от которого представилось возможным только при помощи гравитационного поля планеты Земля. Старший инженер падает на землю вместе с отстёгнутым модулем... 
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/006Tunguss.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">ЩёлкЪ!</a>
+            </div>
+
+            <!-- Описание 2 (привязано к data-art-id="2") -->
+            <div class="art-description" data-art_for="2">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>УБИЙЦА ВАКУОЛЕЙ 2006</h3>
+                <p class="cardtxt"> 
+    &nbsp;&nbsp;&nbsp; Альбом посвящается микроскопическим организмам, встречающимся в капле дождевой воды. Дафнии и вольвоксы, циклопы и инфузории, туфельки и эвгленушки... А так же драматическая охота гидры за пузырьком - эукариотом не оставит равнодушным даже самого зачерствелого циника - трансгуманиста.
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/001VacuolK.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">Щёлг</a>
+            </div>
+
+
+            <div class="art-description" data-art_for="3">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>MEMORIAL 2008</h3>
+                <p class="cardtxt"> 
+                 &nbsp;&nbsp;&nbsp;   Оголённый светящийся гипотетический человек широко раскинув руки в своей непринуждённой ментальности экстраполируется среди огненных туманностей первозданного макрокосма. Что ждёт его в будущем? Какие чаянья и надежды обуревают его? ... Кто же он на самом деле?
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/009Memo.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">Щщолк!</a>
+            </div>
+            
+
+            <div class="art-description" data-art_for="4">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>ПРИЗРАК 2009</h3>
+              <p class="cardtxt"> 
+               &nbsp;&nbsp;&nbsp;    Альбом представляет собою оригинальный саундтрек (OST) к одноимённому мультфильму, выполненному в технике экспериментальной покадровой фотоанимации. <br/>
+			   Посмотреть мультфильм можно тут: 
+			   <a class="targettt" href="https://www.youtube.com/watch?v=87DvVdII-oo" target="_blank" title="Откроется в новой вкладке - или с VPN?">СчолкЪ!</a><br/>
+			   Перейти к альбому можно тут: 
+               <a class="targettt" href="https://katoo500.lovestoblog.com/cont/albums/004Ghost.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">ЩёлкЪ!</a>
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                
+            </div>
+            
+
+            <div class="art-description" data-art_for="5">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>НОЧНОЕ НЕБО АВГУСТА 2009</h3>
+          <p class="cardtxt"> 
+                &nbsp;&nbsp;&nbsp;    Посредством музыки легко передаётся мечтательно - созерцательное состояние, возникающее иногда в августе во время непринуждённого ожидания метеорного потока "Персеиды". Так искристая бездна космоса воспитывает в нас мужество романтиков - фотолюбителей.
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/002AugustSP.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">ЩёлкЪ!</a>
+            </div>
+            
+            <div class="art-description" data-art_for="6">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>RECORD OF THE DREAMS 2010</h3>
+         <p class="cardtxt"> 
+                   &nbsp;&nbsp;&nbsp;    Как записать музыкальные сновидения, изредка посещающие музыкантов? Исключительно по памяти, скажете вы. Так и было до недавнего времени, пока профессор Тура Авессолом Тюбукский не представил нам для теста своё новейшее изобретение - "ДРЁМОФОН Адэнэ-2". 
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/007RecOfD.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">ЩёлкЪ!</a>
+            </div>
+
+            <div class="art-description" data-art_for="7">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>АСИММЕТРИЯ 2010</h3>
+              <p class="cardtxt"> 
+                 &nbsp;&nbsp;&nbsp;   Когда Вы продираетесь сквозь джунгли разноцветных асимметричных проводов, путаясь с плоскогубцами и отвёртками в монструозных нутрях электрических шкафов, помни! ПОМНИ о заземлении! ... Псевдо сборник музыкально - интуитивных иллюстраций.
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/008Assym.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">ЩёлкЪ!</a>
+            </div>
+
+            <div class="art-description" data-art_for="8">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>ЗИГОТА 2012</h3>
+              <p class="cardtxt"> 
+                  &nbsp;&nbsp;&nbsp;    Зигота - это такое маленькое, в пузырьковой оболочке, которое начинает безудержно делиться (множась при этом Х2) да так, что в итоге получается солидный профессор лингвистики Тура Авессолом Тюбукский... Или Теляпия Михайловна Ампурдан. Таинство природы, одним словом. 
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/005Zygot.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">ЩёлкЪ!</a>
+            </div>
+
+            <div class="art-description" data-art_for="9">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>ПРАЗДНИК БРОДЯЧЕГО ДЕРЕВА 2013</h3>
+               <p class="cardtxt"> 
+                   &nbsp;&nbsp;&nbsp;   ...Полинезийское и Микронезийское музыкальное окружение в обыкновенной среднестатической типовой квартире легко достичь при помощи опорожненной бутылки с вермутом, парочки кастрюль, мешочка с крупой и деревянных ложек. Натуральная деревня Онгари, скажу я вам. 
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/012PBD.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">ЩёлкЪ!</a>
+            </div>
+			
+			<div class="art-description" data-art_for="10">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>CYBER SIMULATOR 2013</h3>
+               <p class="cardtxt"> 
+                    &nbsp;&nbsp;&nbsp;   Грядущий ад трансгуманизма навис над планетой. Пока глупцы сообразят, что роботизированные манекены, превосходно имитирующие людей - не люди, а всего лишь имитации, будет уже поздно... Или нет? Круши ломами осциллографы, они мутируют!!! Они на свет лезут!!! 
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/013CyS.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">ЩёлкЪ!</a>
+            </div>
+			
+            <div class="art-description" data-art_for="11">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>ИГОРЬ 2014</h3>
+               <p class="cardtxt"> 
+                  &nbsp;&nbsp;&nbsp;  Альбом посвящается Игорю, горбатому подмастерью товарища Франкенштейна. Захватывающее научное приключение по оживлению штопанного кадавра начинается... Сшитые словно из разных лоскутков композиции ласковым одеяльцем обволакивают мозг...
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/014Igor.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?"> ЩёлкЪ!</a>
+            </div>			
+
+            <div class="art-description" data-art_for="12">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>LASER GAME 2014</h3>
+               <p class="cardtxt"> 
+                    &nbsp;&nbsp;&nbsp; Лазеры и игры, что может быть интереснее... Когда вдумчиво пытаешься преодолеть иллюзорную паутину препятствий, сотканную из тончайших нитей красного лазера. Как оздоровительный цигун... Если в компанию к лазерам не довешены датчики движения и видеокамеры конечно.
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/015laser.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?"> ЩёлкЪ!</a>
+            </div>
+
+
+            <div class="art-description" data-art_for="13">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>МЕЛОМАНИЯ 2015</h3>
+               <p class="cardtxt"> 
+                        &nbsp;&nbsp;&nbsp;   Поиск идеальных нот, золотого сечения, неведомого Кадата издревле интересовали всех мало - мальски уважающих себя энтузиастов. Вот и теперь мы ищем нужные ноты, улавливая их в шелесте трав, капели дождя, слушая негромкие речи рек... 
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/016melom.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">ЩёлкЪ!</a>
+            </div>
+
+            <div class="art-description" data-art_for="14">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>РЕСТАВРАТОР OST 2016</h3>
+               <p class="cardtxt"> 
+                         &nbsp;&nbsp;&nbsp;    Альбом представляет собой оригинальный саунд трек (OST) к одноимённому мультфильму "Реставратор". 
+						 <a class="targettt" href="https://microkino.byethost32.com/list/kino/restorer.htm" target="_blank" title="Откроется в новой вкладке">ЩёлкЪ!</a> 
+						 К основному материалу бонусом прилагается несколько запоминающихся мелодий из остросюжетного мультфильма "Координатор". 
+						<a class="targettt" href="https://microkino.byethost32.com/list/kino/coord.htm" target="_blank" title="Откроется в новой вкладке">ЩёлкЪ!</a> <br/>
+						 ...Перейти к альбому: 
+						 <a class="targettt" href="https://katoo500.lovestoblog.com/cont/albums/017res_ost.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">СчолкЪ!</a>
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+            </div>
+
+            <div class="art-description" data-art_for="15">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>SENTIMENTAL VOYAGE WITH A METRONOME 2016</h3>
+               <p class="cardtxt"> 
+                   &nbsp;&nbsp;&nbsp;   Сборник романтической музыки, посвящённый весенней индустриальной энтропии. Позитивная эклектика настраивает слушателя на оптимистический лад.
+				 <a class="targettt" href="https://katoo500.lovestoblog.com/cont/albums/018s_voyj.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">ЩёлкЪ!</a><br/>
+				   ...Тематический клип в поддержку альбома: 
+				      <a class="targettt" href="http://microkino.byethost32.com/list/kino/macro.htm" target="_blank" title="Откроется в новой вкладке">СчолкЪ!</a>
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+             
+            </div>
+
+            <div class="art-description" data-art_for="16">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>ФИНИШ - FINISH 2017</h3>
+               <p class="cardtxt"> 
+                     &nbsp;&nbsp;&nbsp;   И так. Вы оказались в живописном логическом тупике с несколькими выходами. Отдыхайте, наслаждаясь видом художественно обваливающихся стен под аккомпанемент виолончели. 
+					 <a class="targettt" href="https://katoo500.lovestoblog.com/cont/albums/019Finish.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">КликЪ!</a><br/><br/>
+                      ...Посмотреть музыкальную иллюстрацию про Виману: 
+         
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+				    <a class="targett" href="https://www.youtube.com/watch?v=CVj85cDGe4U" target="_blank" title="Откроется в новой вкладке - или с VPN?">Mmmmmmmmmmmma!</a>
+            </div>
+
+            <div class="art-description" data-art_for="17">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>ПОСВЯЩЕНИЕ ТОПИНАМБУРАМ 2017</h3>
+               <p class="cardtxt"> 
+                 &nbsp;&nbsp;&nbsp;   Клубненосное растение Топинамбур родом из Южной америки и берёт своё название по имени местного племени - Тупи. Клубни Топинамбура, известного ещё как "Земляная груша" напоминают имбирь и могут храниться очень - очень долго. Гораздо дольше картофеля.... Они очень полезны для здоровья.
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/020Glory_to_HT.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">СчолкЪ!</a>
+            </div>
+
+            <div class="art-description" data-art_for="18">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>НЕПОНЯТНАЯ РЕЗНЯ или ВНЕЗЕМНАЯ ТЕТРАЛОГИЯ 2018</h3>
+               <p class="cardtxt"> 
+                 &nbsp;&nbsp;&nbsp;  Кто бы мог подумать, что расшифровка смысла знаменитого "Фестского диска" откроет нам внеземную историю о злоключениях инопланетных вегетативных исследователей в фиолетовом гидрообразном живородящем лесу! 
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/021NR19962018.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">Птыжжь!</a>
+            </div>
+
+            <div class="art-description" data-art_for="19">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>INDUSTRIAL REVIVAL 2018</h3>
+               <p class="cardtxt"> 
+                    &nbsp;&nbsp;&nbsp;  Рано или поздно произойдёт возрождение настоящего индастриала! Ибо постиндустриальная ересь не может породить ни одной вещи. Адепты постиндустриального мышления просто износят и измочалят всё ранее сделанное индустрией. Беспомощные, они будут смотреть, как из руин постиндустриального хаоса вырастает новая глыба ультрасовременной индустрии.
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/022Industrial.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">Аминь!</a>
+            </div>
+
+            <div class="art-description" data-art_for="20">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>ВЕЧЕРНЯЯ ЧУДИНКА 2019</h3>
+               <p class="cardtxt"> 
+                 &nbsp;&nbsp;&nbsp;   Тайное триангуляционное сообщество кураторов небесных сфер при помощи глюкофона вызывает гения музыки. И он пришёл! Неужели гений музыки похож на обыкновенного сияющего цыплёнка? тип тип тип тип...
+типи типи типи... тип тип тип... 
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/023evMiracle.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">Колымбатуха!</a>
+            </div>
+
+            <div class="art-description" data-art_for="21">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3> ЯЩУКЪ БОЛБАЮНЪ 2019 - 2020</h3>
+               <p class="cardtxt"> 
+           
+   &nbsp;&nbsp;&nbsp;  В начале всего была пустота. Полная, всеобъемлющая пустота. Пустота состояла из однотипных сегментов, напоминающих кубы. И вот однажды, в одном из кубов создалось перенапряжение и началась вибрация. Вибрация породила звук...
+
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/024BoxBigTalker01.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">ТО ТО ТО ТО ТО  </a>
+            </div>
+
+            <div class="art-description" data-art_for="22">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>FORCE MAJEURE 2020</h3>
+               <p class="cardtxt"> 
+                    &nbsp;&nbsp;&nbsp; Является ли Форс-мажор иным музыкальным термином, наподобие Рэ-минор или До-мажор? Как звучала бы музыка в тональности Форс-мажор? Много вопросов, мало ответов. На этом альбоме мы постараемся приоткрыть сию занавесь тайны и расставить все диакритические знаки над буквами!
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/026Force_majeure.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">Летс гоу, дескать :)</a>
+            </div>
+
+            <div class="art-description" data-art_for="23">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>AEROBICS AND SCI FI 2021</h3>
+               <p class="cardtxt"> 
+                 &nbsp;&nbsp;&nbsp; Утренняя аэробика на крыше, как правило, традиционно сопровождается разноцветными дымами и фейерверками, во славу сизигии трёх Маринозиейских лун пятнадцатого месяца восхождения Денеб
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/027Aerobics_and_scfi.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">А-эни-то!</a>
+            </div>
+
+            <div class="art-description" data-art_for="24">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>NEXT COLORUM VERBIS 2021</h3>
+               <p class="cardtxt"> 
+                  &nbsp;&nbsp;&nbsp;   Будущее проистекает в наш мир различными формами и следующие цвета слов явное тому подтверждение. Где мелодия распадается на шумы и собирается обратно в мелодию. Ащщщщщщщеееееееее так.
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/028Next.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">N E X T</a>
+            </div>
+			
+            <div class="art-description" data-art_for="25">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>EXPEDITION TO TALOS 2022</h3>
+               <p class="cardtxt"> 
+                      &nbsp;&nbsp;&nbsp;    Подходя к описанию этого альбома, следует уточнить, что никакие цели не были обнаружены ни до, ни после, более удобные для беспрецедентного по дерзости научного эксперимента.
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/029Talos.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">Rooooooooooor!</a>
+            </div>
+
+            <div class="art-description" data-art_for="26">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>CREEPY CARTOONS 2022</h3>
+               <p class="cardtxt">     
+   &nbsp;&nbsp;&nbsp;  Такой весёлый праздник, как Масленица, плюс ещё и с открытым огнём, в условиях городской квартиры выйдет справить лишь в микро-масштабе. А что если всё это снять на видео? Получатся весьма жуткие мультфильмы.  . . .  Creepy Cartoons.
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/030CreCar.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">ДА</a>
+            </div>
+
+            <div class="art-description" data-art_for="27">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>ВДУМЧИВОЕ ИССЛЕДОВАНИЕ КРЕВЕТОК 2022</h3>
+               <p class="cardtxt"> 
+                 &nbsp;&nbsp;&nbsp;   Креветки! Забавные существа, во многом рассматриваемые праздной публикой лишь с гастрономического ракурса... Но мало кто знает об уникальных исследованиях креветок, где были выяснены их врождённые способности к телепатии. 
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/031Shrimps.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">ПФЛЬК</a>
+            </div>
+
+            <div class="art-description" data-art_for="28">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>FAIRY HAIR 2023</h3>
+               <p class="cardtxt">    
+      &nbsp;&nbsp;&nbsp;  - На заводе фильтрации морского микро-пластика произошел инцидент, связанный с новым магнитно-частотным оборудованием. В результате работы этого устройства образовались стоячие реверсные волновые нити, которые назвали "Волосы Феи"...
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/032Fairy.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">- Vzzzzziii!</a>
+            </div>
+			
+            <div class="art-description" data-art_for="29">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>MEDIA FANTASY 2024</h3>
+               <p class="cardtxt"> 
+               
+   &nbsp;&nbsp;&nbsp;  Забудьте про пение сладкоголосых Сирен! Пищащие динамики на длинных шеях Сциллы и клокочущий баритон Харибды не оставят равнодушными отчаявшихся моряков!
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/033Media.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">- Кра кра кра къ къ къ!</a>
+            </div>
+
+            <div class="art-description" data-art_for="30">
+			<span class="close-btn" onclick="hideAllDescriptions()" title="Claudere">&times;</span>
+                <h3>SCYTHIAN GOLD OR FROZEN ANCIENT SUN 2025</h3>
+               <p class="cardtxt"> 
+   &nbsp;&nbsp;&nbsp;  В лучах закатного Солнца удлинённые тени скалистого ландшафта представляются в воображении словно тени древних. Шествующая мимо Скифская конница, поднимающая золотистые облачка пыли под копытами лошадей. Но мы решили, что не пойдём за ними.
+                </p>
+                <!-- <div class="image-placeholder">cover art</div> -->
+                <a class="targett" href="https://katoo500.lovestoblog.com/cont/albums/034Scyth.htm" target="_blank" title="Откроется в новой вкладке - или с VPN?">- О-о-о-а-а-а-а-э-э-э-э!!!</a>
+            </div>
+
+        </div>
+		
+		<br/>
+
+		
+		<div class="info">
+		&nbsp;&nbsp;&nbsp; <span style="text-shadow:0px 2px 4px #000000;"> Сайт <b style="color:#ffffff;">KATOO500</b> посвящён авангардной мечтательной музыке и сюрреалистической анимации, балансирующей на грани интуитивной абстракции. Как звучит стеклянный гвоздь, вбитый в древесную спираль тысячелетней скрученной сосны на ветренном скалистом берегу?<br/>
+<b><i style="color:#82DCE4;">Nota Bene</i></b>: Все тексты на сайте призваны в той или иной манере расширить ощущения музыки и усугубить погружение в атмосферу неизведанного.
+<a href="https://katoo500.lovestoblog.com/cont/list.htm" title="Перейти"><b style="color:#ffffff;">►►►</b></a>
+		</div>
+
+ <br/>
+    <footer>
+        <div class="container">
+            <p style="color:#E1BA53;">&copy; 2026 <a href="https://katoo500.lovestoblog.com/"><b style="color:#E1BA53;">katoo500.lovestoblog.com</b></a> <i>gates_sattelite</i> <b>CC BY-NC-SA</b></p>
+        </div>
+    </footer>
+	
+
+	<script type="text/javascript" src="pixbox/aga.js"></script>
 </body>
 </html>

@@ -1,0 +1,317 @@
+
+        /* --- Базовые стили для всех экранов (1920x1080) --- */
+        html, body {
+            height: 100%;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('skin/3344227-1.jpg');
+            background-color: #e0f7fa;
+            background-attachment: fixed;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header, footer {
+            background-image: url('skin/de.jpg');
+            background-color: #00796b;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+h1 {
+    color: #D04753;
+    margin-top: 5px;
+    position: relative;
+    display: inline-block;
+	cursor:default;
+}
+
+h1:hover {
+    animation: vhs-color-shift 1.5s infinite alternate;
+}
+
+@keyframes vhs-color-shift {
+    0% {
+        text-shadow:
+            0.03em 0 0 #ff00e6,
+            -0.03em -0.02em 0 #00fff2,
+            0.025em 0.05em 0 #e6ff00;
+        color: #D04753;
+    }
+    25% {
+        text-shadow:
+            0.02em 0 0 #ff00a1,
+            -0.02em -0.01em 0 #00aaff,
+            0.03em 0.04em 0 #a1ff00;
+        color: #C03743;
+    }
+    50% {
+        text-shadow:
+            0.04em 0 0 #e600ff,
+            -0.01em -0.03em 0 #ff00aa,
+            0.015em 0.03em 0 #00ffe6;
+        color: #B02733;
+    }
+    75% {
+        text-shadow:
+            0.01em 0 0 #aa00ff,
+            -0.04em -0.01em 0 #00ffaa,
+            0.02em 0.02em 0 #ffaa00;
+        color: #A01723;
+    }
+    100% {
+        text-shadow:
+            0.03em 0 0 #ff00e6,
+            -0.03em -0.02em 0 #00fff2,
+            0.025em 0.05em 0 #e6ff00;
+        color: #D04753;
+    }
+}
+
+        /* --- Стили для сетки блоков --- */
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .art-block {
+            background-image: url('skin/manga.jpg');
+            flex-basis: calc(33.333% - 20px);
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .art-block strong {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.8em;
+            color: #046363;
+        }
+
+        /* --- Адаптивность и смена цветов фона --- */
+        @media (max-width: 768px) {
+            body { background-color: #ffecb3; }
+            header, footer { background-color: #ffa000; }
+            .art-block { flex-basis: calc(50% - 20px); }
+			.info { width:70%;}
+        }
+        @media (max-width: 576px) {
+            body { background-color: #ffcdd2; }
+            header, footer { background-color: #d32f2f; }
+            .art-block { flex-basis: 100%; }
+			.info { width:90%;}
+        }
+
+        /* Стили для контейнера фильтров */
+        .filter-ui {
+            background-image: url('skin/3344226-1.jpg');
+            background-color: #ffffff;
+            padding: 15px 20px;
+            border: 3px solid #000000;
+            border-radius: 21px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-top: -20px;
+	
+        }
+
+        .filter-group {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-group h4 {
+            margin: 0 15px 0 0;
+            color: #43AAB3;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background-color: #e0e0e0;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            user-select: none;
+            font-size: 0.9em;
+        }
+
+        .filter-btn:hover {
+            background-color: #d5d5d5;
+        }
+
+        .filter-btn.active {
+            background-color: #00796b;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 576px) {
+            .filter-group h4 {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+        }
+
+        /* Стили для затемняющего оверлея */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+        }
+
+        /* Изменение стилей для блока описания, чтобы он стал модальным окном */
+        .art-description {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background-image: url('skin/manga2.jpg');
+            background-color: #FFD38D;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 3px solid #00796b;
+            z-index: 1001;
+        }
+
+        .art-description.is-visible,
+        .overlay.is-visible {
+            display: block;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #852B0F;
+        }
+
+        .close-btn:hover {
+            color: #063A76;
+        }
+		
+		.close-btn:active {
+            color: #ffffff;
+        }
+
+
+        .cvr {
+            width: 250px;
+            border: 2px solid #ffffff;
+            box-shadow: -2px 9px 9px rgba(0,0,0,0.5);
+        }
+
+        .cvr:hover {
+            box-shadow: 2px 9px 9px rgba(0,0,0,0.1);
+            border: 2px dashed #ffffff;
+        }
+
+        .cvr:active {
+            box-shadow: 2px 9px 9px rgba(0,0,0,0.3);
+            border: 4px dotted #ffffff;
+            border-radius: 250px;
+        }
+
+        .cvr.active {
+            border-radius: 250px !important;
+            border: 4px dotted #ffffff !important;
+        }
+
+        .cardtxt {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .targett {
+            float: right;
+            font-weight: bold;
+            margin-right: 35px;
+			color:#000000;
+        }
+		.targett:hover {
+		
+		color:#068E2F;
+		
+		}
+		.targett:active {
+		
+		color:#ffffff;
+		
+		}
+		
+		.targettt {
+
+        font-weight: bold;
+		color:#000000;
+		
+        }
+		.targettt:hover {
+		
+		color:#068E2F;
+		
+		}
+		.targettt:active {
+		
+		color:#ffffff;
+		
+		}
+
+        h3 {
+            margin-top: 2px;
+            color: #C93012;
+        }
+
+        .info {
+            margin: 0 auto;
+            width: 45%;
+            border: 3px solid #000000;
+            border-radius: 25px;
+            background-image: url('skin/3344224.jpg');
+            color: #C8FAFF;
+            padding: 12px;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            margin-top: auto;
+        }
