@@ -1,0 +1,279 @@
+
+        :root {
+            --pastel-mint: #d4f1f4;
+            --pastel-lavender: #e6e6fa;
+            --pastel-sand: #f5f5dc;
+            --pastel-blue: #e0f6ff;
+            --pastel-border: #d1e7dd;
+            --text-dark: #333;
+            --text-light: #666;
+        }
+		
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+			background-color: #e0f7fa;
+            background-image: url('/pixbox/skin/2383282977.jpg');
+            background-attachment: fixed;
+            color: #333;
+        }
+
+
+		
+		h1 {
+    color: #D04753;
+    margin-top: 5px;
+    position: relative;
+    display: inline-block;
+	cursor:default;
+}
+
+h1:hover {
+    animation: vhs-color-shift 1.5s infinite alternate;
+}
+
+@keyframes vhs-color-shift {
+    0% {
+        text-shadow:
+            0.03em 0 0 #ff00e6,
+            -0.03em -0.02em 0 #00fff2,
+            0.025em 0.05em 0 #e6ff00;
+        color: #D04753;
+    }
+    25% {
+        text-shadow:
+            0.02em 0 0 #ff00a1,
+            -0.02em -0.01em 0 #00aaff,
+            0.03em 0.04em 0 #a1ff00;
+        color: #C03743;
+    }
+    50% {
+        text-shadow:
+            0.04em 0 0 #e600ff,
+            -0.01em -0.03em 0 #ff00aa,
+            0.015em 0.03em 0 #00ffe6;
+        color: #B02733;
+    }
+    75% {
+        text-shadow:
+            0.01em 0 0 #aa00ff,
+            -0.04em -0.01em 0 #00ffaa,
+            0.02em 0.02em 0 #ffaa00;
+        color: #A01723;
+    }
+    100% {
+        text-shadow:
+            0.03em 0 0 #ff00e6,
+            -0.03em -0.02em 0 #00fff2,
+            0.025em 0.05em 0 #e6ff00;
+        color: #D04753;
+    }
+}
+
+
+        header, footer {
+            background-color: #00796b;
+		   background-image: url('/pixbox/skin/de.jpg');
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: -12px;
+			font-weight:bold;
+        }
+
+        .nav-links a {
+            color: #DE6300;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-dark);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .gallery-item {
+            aspect-ratio: 3/4;
+            border: 3px solid #EDB14B;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+			border: 4px solid #7DDE73;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 12px;
+            width: 70%;
+            max-height: 80vh;
+            overflow: hidden;
+            display: flex;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 98%;
+				height:99%;
+                flex-direction: column;
+            }
+        }
+
+        .modal-image {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-height: 80vh;
+        }
+
+        .modal-image img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 0;
+        }
+
+        .modal-info {
+            flex: 1;
+            padding: 50px 30px 30px;
+            text-align: left;
+            overflow-y: auto;
+        }
+
+        .modal-title {
+            text-align: center;
+            margin-top: 0;
+            font-size: 1.8em;
+            color: var(--text-dark);
+        }
+
+        .modal-text {
+            margin: 20px 0;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .modal-source {
+            display: block;
+            color: var(--text-light);
+            text-decoration: none;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .modal-source:hover {
+            color: var(--text-dark);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2em;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: color 0.3s;
+            z-index: 10;
+        }
+
+        .close-btn:hover {
+            color: var(--text-dark);
+        }
+
+        .info-block {
+            background-color: var(--pastel-mint);
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+            border: 3px solid #000000;
+            border-radius: 25px;
+            background-image: url('/pixbox/skin/3344224.jpg');
+			margin-bottom:-25px;
+        }
+
+        .info-text {
+            margin: 0;
+            color: #C8FAFF;
+            font-size: 1.1em;
+            line-height: 1.8;
+			text-shadow:0px 2px 4px #000000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 7px solid #212526;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        footer a:hover {
+            color: var(--text-dark);
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
