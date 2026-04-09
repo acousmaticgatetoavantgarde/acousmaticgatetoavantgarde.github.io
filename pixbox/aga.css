@@ -315,3 +315,30 @@ h1:hover {
         footer {
             margin-top: auto;
         }
+
+
+
+
+
+		.ahit {
+		
+		font-style:normal;
+		color:#DE6300;
+		text-decoration:none;
+		
+		}
+		
+		.ahit:hover {
+		
+		color:#DE6300;
+		font-weight:bold;
+		text-decoration:none;
+		
+		}
+		
+		.ahit:active {
+		
+		color:#FFC27B;
+		text-decoration:underline;
+		
+		}
